@@ -1,254 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Penguin AI Global</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#030712;
+margin:0;
+font-family:Arial,sans-serif;
+background:url('E48F6FB2-B380-4E98-B783-E2D703AF0136.png') center center/cover no-repeat;
+min-height:100vh;
 color:white;
-overflow-x:hidden;
 }
 
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url('https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=2070');
-background-size:cover;
-background-position:center;
-z-index:-1;
+.overlay{
+background:rgba(0,0,0,0.45);
+min-height:100vh;
+padding:40px;
+text-align:center;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,.6);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(0,191,255,.3);
+.avatar{
+width:220px;
+border-radius:50%;
+margin-top:40px;
+box-shadow:0 0 30px #00bfff;
 }
 
-.logo{
-font-size:34px;
-font-weight:bold;
+h1{
+font-size:60px;
 color:#00bfff;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-}
-
-.hero{
-padding:80px 8%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.hero h1{
-font-size:72px;
-line-height:1;
-margin-bottom:20px;
-}
-
-.hero h1 span{
-color:#00bfff;
-}
-
-.hero p{
-font-size:22px;
-color:#d7d7d7;
+.subtitle{
+font-size:28px;
 margin-bottom:30px;
 }
 
-.buy-box{
-background:rgba(0,0,0,.7);
-border:2px solid #00bfff;
-padding:30px;
-border-radius:20px;
-box-shadow:0 0 30px rgba(0,191,255,.4);
-}
-
-.buy-box h2{
-margin-bottom:20px;
-}
-
-.address{
-background:#08101f;
-padding:15px;
-border-radius:10px;
-word-break:break-all;
-margin:15px 0;
-}
-
-.btn{
+.buy{
 display:inline-block;
 padding:15px 35px;
-background:#00bfff;
+background:#6f3cff;
 color:white;
 text-decoration:none;
-font-weight:bold;
-border-radius:10px;
-box-shadow:0 0 20px rgba(0,191,255,.5);
+border-radius:12px;
+font-size:24px;
+margin-top:20px;
 }
 
-.section{
-padding:80px 8%;
-}
-
-.section h2{
-font-size:48px;
-margin-bottom:25px;
-color:#00bfff;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:rgba(0,0,0,.6);
-padding:25px;
-border-radius:15px;
-border:1px solid rgba(0,191,255,.3);
-}
-
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid rgba(255,255,255,.1);
-}
-
-@media(max-width:900px){
-
-.hero{
-grid-template-columns:1fr;
-text-align:center;
-}
-
-.hero h1{
-font-size:52px;
-}
+.wallet{
+margin-top:20px;
+font-size:18px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+word-break:break-all;
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-<div class="logo">🐧 Penguin AI</div>
+<div class="overlay">
 
-<nav>
-<a href="#about">About</a>
-<a href="#roadmap">Roadmap</a>
-<a href="#buy">Buy</a>
-</nav>
-</header>
+<img src="F62130C9-EA70-4233-A012-8408E7825099.png" class="avatar">
 
-<section class="hero">
+<h1>Penguin AI Global</h1>
 
-<div>
-<h1>PENGUIN <span>AI</span></h1>
-
-<p>
+<div class="subtitle">
 The Future of AI-Powered Crypto Innovation
-</p>
-
-<a href="#buy" class="btn">
-BUY PENGUAI
-</a>
 </div>
 
-<div class="buy-box" id="buy">
-
-<h2>Buy PenguAI on Solana</h2>
-
-<p>Send SOL to:</p>
-
-<div class="address">
+<div class="wallet">
+Buy on Solana:<br>
 4fDMSB3RnZfYy34dXfqupkjRkAMtCDgN439NJSfyMez1
 </div>
 
-<p>X: @PenguinAIGlobal</p>
+<br>
+
+<a class="buy" href="#">
+BUY TOKEN
+</a>
 
 </div>
-
-</section>
-
-<section class="section" id="about">
-
-<h2>About</h2>
-
-<p>
-Penguin AI Global is a forward-thinking Web3 project that combines
-Artificial Intelligence, blockchain technology, and a strong global
-community. Our mission is to build innovative AI-powered solutions
-for the future of decentralized finance and digital ecosystems.
-</p>
-
-</section>
-
-<section class="section" id="roadmap">
-
-<h2>Roadmap</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Phase 1</h3>
-<p>
-Project Launch<br>
-Website Release<br>
-Community Building
-</p>
-</div>
-
-<div class="card">
-<h3>Phase 2</h3>
-<p>
-Marketing Campaign<br>
-Social Growth<br>
-Strategic Partnerships
-</p>
-</div>
-
-<div class="card">
-<h3>Phase 3</h3>
-<p>
-AI Ecosystem Development<br>
-Exchange Listings<br>
-Global Expansion
-</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Penguin AI Global • X @PenguinAIGlobal
-</footer>
 
 </body>
 </html>
