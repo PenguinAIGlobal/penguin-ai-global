@@ -13,26 +13,29 @@ nav{position:fixed;top:0;left:0;right:0;height:62px;background:rgba(3,5,15,.95);
 .logo{color:var(--white);text-decoration:none;font-weight:900;font-size:1.05rem;display:flex;align-items:center;gap:10px}
 .logo span{color:var(--cyan)}
 .logo img{width:44px;height:44px;border-radius:50%;border:2px solid rgba(0,212,255,.5);object-fit:cover;box-shadow:0 0 12px rgba(0,212,255,.4)}
-.btn{background:var(--cyan);color:#000;padding:.5rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.8rem}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 5vw 60px;position:relative;overflow:hidden;background-image:url('https://i.ibb.co/21DKQD9P/E48-F6-FB2-B380-4-E98-B783-E2-D703-AF0136.png');background-size:cover;background-position:center top}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,5,15,.82) 0%,rgba(3,5,15,.55) 50%,rgba(3,5,15,.88) 100%)}
-.hero-inner{position:relative;z-index:1}
-.hero h1{font-family:'Orbitron',monospace;font-size:clamp(2.5rem,8vw,5rem);font-weight:900;line-height:1.05;margin-bottom:1rem}
-.hero h1 span{color:var(--cyan)}
-.hero p{color:var(--muted);font-size:1rem;max-width:480px;margin:0 auto 2rem;line-height:1.75}
-.live{display:inline-flex;align-items:center;gap:6px;color:var(--cyan);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem}
+.btn{background:transparent;border:1.5px solid var(--cyan);color:var(--cyan);padding:.5rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.8rem;font-family:'Orbitron',monospace}
+.hero{min-height:100vh;display:flex;align-items:center;padding:80px 5vw 60px;position:relative;overflow:hidden;background-image:url('https://i.ibb.co/21DKQD9P/E48-F6-FB2-B380-4-E98-B783-E2-D703-AF0136.png');background-size:cover;background-position:center top}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,5,15,.85) 0%,rgba(3,5,15,.4) 60%,rgba(3,5,15,.7) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:600px}
+.live{display:inline-flex;align-items:center;gap:6px;color:var(--cyan);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);padding:.35rem 1rem;border-radius:100px}
 .live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:p 1.5s infinite}
 @keyframes p{0%,100%{opacity:1}50%{opacity:.3}}
-.btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.b1{background:linear-gradient(135deg,var(--violet),#0088bb);color:#fff;padding:.85rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.88rem;box-shadow:0 0 30px rgba(123,63,228,.4)}
-.b2{border:1.5px solid rgba(255,255,255,.3);color:var(--white);padding:.85rem 1.8rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.88rem}
+h1{font-family:'Orbitron',monospace;font-size:clamp(2.8rem,8vw,5.5rem);font-weight:900;line-height:1.0;margin-bottom:1rem;text-shadow:0 0 40px rgba(0,212,255,.3)}
+h1 span{color:var(--cyan)}
+.hero p{color:var(--muted);font-size:1.05rem;max-width:480px;margin-bottom:2rem;line-height:1.75}
+.feats{display:flex;gap:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.feat{font-size:.78rem;color:var(--cyan);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.b1{background:linear-gradient(135deg,var(--violet),#0088bb);color:#fff;padding:.9rem 2.2rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.88rem;font-family:'Orbitron',monospace;box-shadow:0 0 30px rgba(123,63,228,.5)}
+.b2{border:1.5px solid rgba(255,255,255,.25);color:var(--white);padding:.9rem 1.8rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.88rem;font-family:'Orbitron',monospace}
 section{padding:80px 5vw}
 .inner{max-width:1000px;margin:0 auto}
 h2{font-family:'Orbitron',monospace;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;margin-bottom:.75rem;text-align:center}
 .ey{color:var(--cyan);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-align:center;margin-bottom:.5rem;font-weight:700}
 .sub{color:var(--muted);text-align:center;max-width:480px;margin:0 auto 3rem;line-height:1.75}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
-.card{background:var(--deep);padding:1.8rem 1.5rem}
+.card{background:var(--deep);padding:1.8rem 1.5rem;transition:background .2s}
+.card:hover{background:var(--panel)}
 .ci{font-size:1.8rem;margin-bottom:.7rem}
 .ct{color:var(--cyan);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
 .cd{color:var(--muted);font-size:.84rem;line-height:1.6}
@@ -54,14 +57,19 @@ footer{border-top:1px solid var(--border);padding:40px 5vw;display:flex;justify-
     <img src="https://i.ibb.co/3yg3zmvn/F62130-C9-EA70-4233-A012-8408-E7825099.png" alt="Penguin AI Global">
     <span class="logo-text">PENGUIN <span>AI GLOBAL</span></span>
   </a>
-  <a class="btn" href="#contract">Buy Token 🚀</a>
+  <a class="btn" href="#contract">BUY TOKEN 🚀</a>
 </nav>
 <section class="hero">
   <div class="hero-ov"></div>
   <div class="hero-inner">
     <div class="live">Live on Solana</div>
     <h1>PENGUIN <span>AI</span><br>GLOBAL</h1>
-    <p>The Future of AI on Solana. Community-driven. Fair launch. Built for everyone.</p>
+    <p>The Future of AI on Solana. Join the revolution of AI-powered crypto innovation built for the community.</p>
+    <div class="feats">
+      <span class="feat">⚡ AI Driven</span>
+      <span class="feat">🐧 Community</span>
+      <span class="feat">🚀 Built for Future</span>
+    </div>
     <div class="btns">
       <a class="b1" href="#contract">Buy $PENGUINAI 🚀</a>
       <a class="b2" href="#roadmap">Roadmap</a>
